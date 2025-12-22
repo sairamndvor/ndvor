@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#home" class="nav-logo">
-                <span class="logo-nd">nd</span><span class="logo-vor">VOR</span>
+            <a class="navbar-brand" href="index.html">
+                <!-- IMAGE OR SIMPLE TEXT -->
+                <img class="dark-logo" id="dark-logo" src="assets/images/Logo.jpg" width="110" alt="">
             </a>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
@@ -22,14 +26,24 @@
                     <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
                     <li class="nav-item"><a href="#careers" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="#people" class="nav-link">Our People</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <button class="nav-close" id="nav-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
             </div>
             <button class="nav-toggle" id="nav-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
             </button>
         </nav>
     </header>
@@ -40,8 +54,11 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <span class="hero-subtitle">Technology Solutions Partner</span>
-                    <h1 class="hero-title">Transforming Business Through <span class="text-gradient">Innovation</span></h1>
-                    <p class="hero-description">We provide cutting-edge IT solutions, business modernization, and consulting services on IBM, Microsoft, and Open Source platforms to help enterprises thrive in the digital age.</p>
+                    <h1 class="hero-title">Transforming Business Through <span class="text-gradient">Innovation</span>
+                    </h1>
+                    <p class="hero-description">We provide cutting-edge IT solutions, business modernization, and
+                        consulting services on IBM, Microsoft, and Open Source platforms to help enterprises thrive in
+                        the digital age.</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get Started</a>
                         <a href="#services" class="btn btn-secondary">Our Services</a>
@@ -72,12 +89,23 @@
                 </div>
                 <div class="about-grid">
                     <div class="about-content">
-                        <p class="about-text">ndVOR is a technology services company founded in 2009, specializing in delivering innovative IT solutions that drive business transformation. Our name phonetically sounds like "Endeavor," reflecting our commitment to striving for excellence in everything we do.</p>
-                        <p class="about-text">We combine deep technical expertise with a client-centric approach to deliver solutions that create lasting value. Our team of skilled professionals works across IBM, Microsoft, and Open Source platforms to help organizations modernize their operations and achieve their strategic goals.</p>
+                        <p class="about-text">ndVOR is a technology services company founded in 2009, specializing in
+                            delivering innovative IT solutions that drive business transformation. Our name phonetically
+                            sounds like "Endeavor," reflecting our commitment to striving for excellence in everything
+                            we do.</p>
+                        <p class="about-text">We combine deep technical expertise with a client-centric approach to
+                            deliver solutions that create lasting value. Our team of skilled professionals works across
+                            IBM, Microsoft, and Open Source platforms to help organizations modernize their operations
+                            and achieve their strategic goals.</p>
                         <div class="about-features">
                             <div class="feature-item">
                                 <div class="feature-icon orange">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
                                 </div>
                                 <div>
                                     <h4>Innovation Driven</h4>
@@ -86,7 +114,14 @@
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon green">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
                                 </div>
                                 <div>
                                     <h4>Client Focused</h4>
@@ -95,7 +130,12 @@
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon orange">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
                                 </div>
                                 <div>
                                     <h4>Timely Delivery</h4>
@@ -108,13 +148,15 @@
                         <div class="about-card">
                             <div class="about-card-content">
                                 <h3>Our Mission</h3>
-                                <p>To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in an ever-evolving digital landscape.</p>
+                                <p>To empower businesses with innovative technology solutions that drive growth,
+                                    efficiency, and competitive advantage in an ever-evolving digital landscape.</p>
                             </div>
                         </div>
                         <div class="about-card secondary">
                             <div class="about-card-content">
                                 <h3>Our Vision</h3>
-                                <p>To be the most trusted technology partner for enterprises worldwide, recognized for our expertise, integrity, and commitment to client success.</p>
+                                <p>To be the most trusted technology partner for enterprises worldwide, recognized for
+                                    our expertise, integrity, and commitment to client success.</p>
                             </div>
                         </div>
                     </div>
@@ -127,56 +169,125 @@
                 <div class="section-header">
                     <span class="section-subtitle">Our Services</span>
                     <h2 class="section-title">Comprehensive IT Solutions</h2>
-                    <p class="section-description">We offer a wide range of technology services to help your business succeed in the digital era</p>
+                    <p class="section-description">We offer a wide range of technology services to help your business
+                        succeed in the digital era</p>
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
                         </div>
                         <h3 class="service-title">Application Development</h3>
-                        <p class="service-description">Custom software solutions tailored to your business needs using modern technologies and agile methodologies.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Custom software solutions tailored to your business needs using
+                            modern technologies and agile methodologies.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
                         </div>
                         <h3 class="service-title">Cloud Services</h3>
-                        <p class="service-description">Seamless cloud migration, management, and optimization services for AWS, Azure, and IBM Cloud platforms.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Seamless cloud migration, management, and optimization services
+                            for AWS, Azure, and IBM Cloud platforms.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
                         </div>
                         <h3 class="service-title">Data Analytics</h3>
-                        <p class="service-description">Transform your data into actionable insights with our advanced analytics and business intelligence solutions.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Transform your data into actionable insights with our advanced
+                            analytics and business intelligence solutions.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
                         </div>
                         <h3 class="service-title">Cybersecurity</h3>
-                        <p class="service-description">Protect your digital assets with our comprehensive security assessments, implementation, and monitoring services.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Protect your digital assets with our comprehensive security
+                            assessments, implementation, and monitoring services.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
                         </div>
                         <h3 class="service-title">IT Consulting</h3>
-                        <p class="service-description">Strategic technology guidance to align your IT infrastructure with business objectives and industry best practices.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Strategic technology guidance to align your IT infrastructure
+                            with business objectives and industry best practices.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                     <div class="service-card">
                         <div class="service-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
                         </div>
                         <h3 class="service-title">DevOps Solutions</h3>
-                        <p class="service-description">Streamline your development lifecycle with CI/CD pipelines, automation, and infrastructure as code practices.</p>
-                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        <p class="service-description">Streamline your development lifecycle with CI/CD pipelines,
+                            automation, and infrastructure as code practices.</p>
+                        <a href="#contact" class="service-link">Learn More <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg></a>
                     </div>
                 </div>
             </div>
@@ -187,19 +298,27 @@
                 <div class="section-header">
                     <span class="section-subtitle">Solutions</span>
                     <h2 class="section-title">Industry-Specific Solutions</h2>
-                    <p class="section-description">Tailored technology solutions designed for your industry's unique challenges</p>
+                    <p class="section-description">Tailored technology solutions designed for your industry's unique
+                        challenges</p>
                 </div>
                 <div class="solutions-grid">
                     <div class="solution-card">
                         <div class="solution-image">
                             <div class="solution-overlay"></div>
                             <div class="solution-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
                             </div>
                         </div>
                         <div class="solution-content">
                             <h3>Enterprise Solutions</h3>
-                            <p>Comprehensive enterprise-grade solutions including ERP integration, workflow automation, and business process optimization.</p>
+                            <p>Comprehensive enterprise-grade solutions including ERP integration, workflow automation,
+                                and business process optimization.</p>
                             <ul class="solution-features">
                                 <li>ERP Integration</li>
                                 <li>Workflow Automation</li>
@@ -211,12 +330,18 @@
                         <div class="solution-image">
                             <div class="solution-overlay"></div>
                             <div class="solution-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                </svg>
                             </div>
                         </div>
                         <div class="solution-content">
                             <h3>Banking & Finance</h3>
-                            <p>Secure, compliant financial solutions with advanced fraud detection, core banking modernization, and regulatory reporting.</p>
+                            <p>Secure, compliant financial solutions with advanced fraud detection, core banking
+                                modernization, and regulatory reporting.</p>
                             <ul class="solution-features">
                                 <li>Core Banking</li>
                                 <li>Fraud Detection</li>
@@ -228,12 +353,17 @@
                         <div class="solution-image">
                             <div class="solution-overlay"></div>
                             <div class="solution-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
                             </div>
                         </div>
                         <div class="solution-content">
                             <h3>Healthcare</h3>
-                            <p>HIPAA-compliant healthcare IT solutions including EHR integration, telemedicine platforms, and patient management systems.</p>
+                            <p>HIPAA-compliant healthcare IT solutions including EHR integration, telemedicine
+                                platforms, and patient management systems.</p>
                             <ul class="solution-features">
                                 <li>EHR Integration</li>
                                 <li>Telemedicine</li>
@@ -245,12 +375,21 @@
                         <div class="solution-image">
                             <div class="solution-overlay"></div>
                             <div class="solution-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                    </path>
+                                </svg>
                             </div>
                         </div>
                         <div class="solution-content">
                             <h3>Digital Transformation</h3>
-                            <p>End-to-end digital transformation services to modernize legacy systems and create agile, customer-centric operations.</p>
+                            <p>End-to-end digital transformation services to modernize legacy systems and create agile,
+                                customer-centric operations.</p>
                             <ul class="solution-features">
                                 <li>Legacy Modernization</li>
                                 <li>API Integration</li>
@@ -268,22 +407,39 @@
                     <div class="careers-content">
                         <span class="section-subtitle">Careers</span>
                         <h2 class="section-title">Join Our Team</h2>
-                        <p class="careers-description">Be part of a dynamic team that's shaping the future of technology. We offer exciting opportunities for growth, learning, and innovation.</p>
+                        <p class="careers-description">Be part of a dynamic team that's shaping the future of
+                            technology. We offer exciting opportunities for growth, learning, and innovation.</p>
                         <div class="careers-perks">
                             <div class="perk-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Competitive Compensation</span>
                             </div>
                             <div class="perk-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Professional Development</span>
                             </div>
                             <div class="perk-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Flexible Work Environment</span>
                             </div>
                             <div class="perk-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
                                 <span>Health & Wellness Benefits</span>
                             </div>
                         </div>
@@ -336,18 +492,121 @@
             </div>
         </section>
 
+        <section class="people-section" id="people">
+            <div class="container">
+                <div class="people-header">
+                    <h2>Our People</h2>
+                    <p>
+                        Team ndVOR is experienced and passionate about working in the interest of the customer!
+                    </p>
+                </div>
+                <div class="people-profiles">
+                    <div class="people-profile selected" data-person="jaikishen">
+                        <img src="assets/images/jaikishen.jpg" alt="Jaikishen">
+                        <span>Jaikishen</span>
+                    </div>
+                    <div class="people-profile" data-person="manoj">
+                        <img src="assets/images/manoj.jpg" alt="Manoj">
+                        <span>Manoj</span>
+                    </div>
+                    <!--
+            Example to add third person:
+            <div class="people-profile" data-person="third">
+                <img src="assets/images/third.jpg" alt="Third Person">
+                <span>Third Person</span>
+            </div>
+            -->
+                </div>
+                <div class="people-details active" id="person-jaikishen">
+                    <button class="close-btn" onclick="collapsePeople();">Close</button>
+                    <div class="person-bio-header">
+                        <div class="person-image"><img src="assets/images/jaikishen.jpg" alt="Jaikishen"></div>
+                        <div class="person-main">
+                            <div class="person-name">Jaikishen K</div>
+                            <div class="person-title">President</div>
+                            <div class="person-bio">
+                                Jai founded ndVOR with a vision to provide exceptional services to customers by
+                                leveraging technology to solve business problems. An accomplished marketing professional
+                                with a foundation of management excellence, Jai brings a hands-on approach to management
+                                with rich insights to organizational effectiveness, business development, and strategic
+                                planning.
+                            </div>
+                            <div class="person-bio">
+                                In a career spanning over two decades, Jai has had vast exposure to International Sales,
+                                Product Marketing and Service delivery in the Information Technology and Telecom
+                                industries. He has led the launch of industry-leading products for the Research
+                                Community in the Higher Education and Medical Sectors in the U.S.
+                            </div>
+                            <div class="person-bio">
+                                Jai has successfully grown an IBM technologies services business which culminated in a
+                                merger with MindTree Consulting, where he took on the role of managing the combined IBM
+                                services business for North America and Europe. He has held country responsibilities for
+                                Motorola's customer-owned messaging business and excelled at various sales and product
+                                marketing roles for Digital Equipment Corporation.
+                            </div>
+                            <div class="person-bio">
+                                Jai has a Master's in Marketing Management from the University of Bombay. He is based
+                                out of New Jersey, USA.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="people-details" id="person-manoj">
+                    <button class="close-btn" onclick="collapsePeople();">Close</button>
+                    <div class="person-bio-header">
+                        <div class="person-image"><img src="assets/images/manoj.jpg" alt="Manoj"></div>
+                        <div class="person-main">
+                            <div class="person-name">Manoj Vellakkat</div>
+                            <div class="person-title">Head – New Business & Operations</div>
+                            <div class="person-bio">
+                                Manoj brings over two decades of experience in delivery, practice building, pre-sales
+                                and managing customer relationships. As Head – New Business & Operations, Manoj is
+                                responsible for profitable business growth at ndVOR. He is also responsible for building
+                                a passionate set of professionals with a “Can do” attitude who are sensitive to customer
+                                requirements. Manoj also takes care of the IT and Operations function of the
+                                organization.
+                            </div>
+                            <div class="person-bio">
+                                Prior to ndVOR, Manoj worked with MindTree as Program Director where he was responsible
+                                for practice building and delivery management of ERP projects on BPCS and SAP. He
+                                started his IT career at Linc Software and gained good exposure on the IBM i platform.
+                                He has wide working experience with customers across multiple countries and geographies.
+                            </div>
+                            <div class="person-bio">
+                                Manoj holds a bachelor’s degree in science and specialization in computer applications.
+                                He has also completed a Senior Management Program from IIM-Calcutta.
+                            </div>
+                            <div class="person-bio">
+                                Manoj's leisure pursuits include traveling and tending to the family's estate and rubber
+                                plantation.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+        To add a third member's detail panel, copy this block and change ids/data-person appropriately.
+        -->
+            </div>
+        </section>
+
         <section class="contact section" id="contact">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Contact Us</span>
                     <h2 class="section-title">Let's Start a Conversation</h2>
-                    <p class="section-description">Ready to transform your business? Get in touch with our team today.</p>
+                    <p class="section-description">Ready to transform your business? Get in touch with our team today.
+                    </p>
                 </div>
                 <div class="contact-grid">
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
                             </div>
                             <div>
                                 <h4>Our Office</h4>
@@ -356,7 +615,14 @@
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
                             </div>
                             <div>
                                 <h4>Email Us</h4>
@@ -365,7 +631,13 @@
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
                             </div>
                             <div>
                                 <h4>Call Us</h4>
@@ -374,13 +646,25 @@
                         </div>
                         <div class="social-links">
                             <a href="#" class="social-link" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
                             </a>
                             <a href="#" class="social-link" aria-label="Twitter">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                </svg>
                             </a>
                             <a href="#" class="social-link" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
@@ -418,7 +702,8 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="How can we help you?"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Send Message</button>
                     </form>
@@ -430,10 +715,11 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="#home" class="nav-logo">
-                        <span class="logo-nd">nd</span><span class="logo-vor">VOR</span>
-                    </a>
+                <div class="footer-brand" style="display: grid;">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- IMAGE OR SIMPLE TEXT -->
+                        <img class="dark-logo" id="dark-logo" src="assets/images/Logo.jpg" width="110" alt="">
+                    </a><br>
                     <p>Transforming businesses through innovative technology solutions since 2009.</p>
                 </div>
                 <div class="footer-links">
@@ -465,11 +751,50 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 ndVOR Solutions. All rights reserved.</p>
+                <p>&copy; 2025 ndVOR Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Collapse/expand logic for Our People section
+        function collapsePeople() {
+            document.querySelectorAll('.people-details').forEach(p => p.classList.remove('active', 'show-close'));
+            document.querySelectorAll('.people-profile').forEach(p => p.classList.remove('selected'));
+        }
+
+        document.querySelectorAll('.people-profile').forEach(function (profile) {
+            profile.addEventListener('click', function () {
+                // Remove selected from all, add to this
+                document.querySelectorAll('.people-profile').forEach(p => p.classList.remove('selected'));
+                profile.classList.add('selected');
+                // Hide current active details
+                document.querySelectorAll('.people-details').forEach(det => det.classList.remove('active', 'show-close'));
+                // Get which to show
+                var who = profile.getAttribute('data-person');
+                var details = document.getElementById('person-' + who);
+                if (details) {
+                    details.classList.add('active');
+                    setTimeout(() => details.classList.add('show-close'), 300); // show close button after expand
+                }
+            });
+        });
+
+        // On mobile, show close buttons
+        function handleResize() {
+            document.querySelectorAll('.people-details').forEach(detail => {
+                if (window.innerWidth <= 700) {
+                    detail.classList.add('show-close');
+                } else {
+                    detail.classList.remove('show-close');
+                }
+            });
+        }
+        window.addEventListener('resize', handleResize);
+        window.addEventListener('DOMContentLoaded', handleResize);
+
+    </script>
 </body>
+
 </html>

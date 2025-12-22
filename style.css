@@ -112,6 +112,25 @@ body {
     font-weight: 800;
 }
 
+.navbar-brand {
+    float: none;
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 20px;
+    float: left;
+    padding: 15px 15px;
+    line-height: 20px;
+}
+
+.navbar-brand>img {
+    display: block;
+}
+
 .logo-nd {
     color: var(--orange);
 }
@@ -202,7 +221,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(255, 107, 0, 0.15) 0%, transparent 40%),
         radial-gradient(circle at 80% 20%, rgba(0, 165, 80, 0.15) 0%, transparent 40%);
     z-index: -1;
@@ -619,6 +638,196 @@ body {
     margin-bottom: 20px;
 }
 
+.people-section {
+    background: #fff;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+.people-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.people-header h2 {
+    font-size: 32px;
+    color: var(--gray-900, #111827);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.people-header p {
+    color: var(--gray-500, #6B7280);
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.people-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.people-profile {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.people-profile img {
+    width: 140px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.09);
+    border: 3px solid transparent;
+    transition: border 0.2s, transform 0.2s;
+    background: white;
+}
+
+.people-profile.selected img,
+.people-profile:hover img {
+    border: 3px solid var(--orange, #FF6B00);
+    transform: scale(1.04);
+}
+
+.people-profile span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-700, #374151);
+}
+
+.people-details {
+    max-width: 830px;
+    margin: 0 auto;
+    padding: 36px 38px 24px 38px;
+    box-shadow: 0px 4px 16px 0 rgba(255, 107, 0, 0.09);
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.people-details:not(.active) {
+    display: none;
+}
+
+.people-details .close-btn {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: #111;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 3px 14px 3px 14px;
+    cursor: pointer;
+}
+
+.people-details.show-close .close-btn {
+    display: block;
+}
+
+.person-bio-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    margin-bottom: 15px;
+}
+
+.person-image {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.person-image img {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.person-main {
+    flex: 1;
+}
+
+.person-name {
+    font-size: 22px;
+    color: var(--orange, #FF6B00);
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.person-title {
+    font-size: 15px;
+    color: var(--gray-600, #4B5563);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.person-bio {
+    font-size: 15px;
+    color: var(--gray-700, #374151);
+    line-height: 1.7;
+    margin-bottom: 7px;
+}
+
+.person-bio:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 950px) {
+    .people-details {
+        padding: 22px 10px 17px 10px;
+    }
+
+    .person-bio-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .person-image {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    .people-section {
+        padding: 36px 0;
+    }
+
+    .people-details {
+        padding: 9px 4px 5px 4px;
+    }
+
+    .people-profiles {
+        gap: 12px;
+    }
+
+    .people-profile img {
+        width: 90px;
+        height: 110px;
+    }
+
+    .person-image,
+    .person-image img {
+        width: 70px;
+        height: 80px;
+    }
+
+    .person-name {
+        font-size: 18px;
+    }
+}
+
 .job-card {
     display: flex;
     justify-content: space-between;
@@ -830,30 +1039,30 @@ body {
     .section {
         padding: 80px 0;
     }
-    
+
     .section-title {
         font-size: 34px;
     }
-    
+
     .hero-title {
         font-size: 44px;
     }
-    
+
     .about-grid,
     .contact-grid,
     .careers-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .solutions-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -872,21 +1081,21 @@ body {
         box-shadow: var(--shadow-xl);
         transition: var(--transition);
     }
-    
+
     .nav-menu.show {
         right: 0;
     }
-    
+
     .nav-list {
         flex-direction: column;
         gap: 24px;
     }
-    
+
     .nav-link {
         color: var(--gray-700) !important;
         font-size: 18px;
     }
-    
+
     .nav-toggle,
     .nav-close {
         display: flex;
@@ -894,58 +1103,58 @@ body {
         justify-content: center;
         z-index: 100;
     }
-    
+
     .nav-close {
         position: absolute;
         top: 24px;
         right: 24px;
         color: var(--gray-700);
     }
-    
+
     .hero {
         padding: 100px 0 60px;
         min-height: auto;
     }
-    
+
     .hero-title {
         font-size: 36px;
     }
-    
+
     .hero-description {
         font-size: 16px;
     }
-    
+
     .hero-stats {
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
-    
+
     .stat-number {
         font-size: 40px;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-form {
         padding: 30px 20px;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .footer-brand p {
         max-width: 100%;
     }
-    
+
     .job-card {
         flex-direction: column;
         text-align: center;
@@ -957,32 +1166,32 @@ body {
     .container {
         padding: 0 16px;
     }
-    
+
     .section {
         padding: 60px 0;
     }
-    
+
     .section-title {
         font-size: 28px;
     }
-    
+
     .hero-title {
         font-size: 30px;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
         text-align: center;
     }
-    
+
     .about-card {
         padding: 30px;
     }
-    
+
     .service-card {
         padding: 30px;
     }
@@ -993,6 +1202,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

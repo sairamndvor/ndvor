@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      . logo { font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 48px; }
+      .orange { fill: #FF8833; }
+      .green { fill: #9BC53D; }
+      .phi-symbol { fill: none; stroke: #E85241; stroke-width: 4.5; }
+      
+      @media (prefers-color-scheme: dark) {
+        .orange { fill: #FFA64D; }
+        .green { fill: #A8D055; }
+        .phi-symbol { stroke: #FF6B5B; }
+      }
+    </style>
+  </defs>
+  
+  <g class="logo">
+    <text x="5" y="50" class="orange">nd</text>
+    <text x="70" y="50" class="green">V</text>
+    <g transform="translate(115, 28)">
+      <circle cx="0" cy="0" r="16" class="phi-symbol"/>
+      <line x1="0" y1="-16" x2="0" y2="16" class="phi-symbol"/>
+    </g>
+    <text x="145" y="50" class="orange">O</text>
+    <text x="185" y="50" class="green">R</text>
+  </g>
+</svg>
