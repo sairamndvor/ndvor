@@ -41,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const sectionTop = section.offsetTop - 150;
             const sectionId = section.getAttribute('id');
             const navLink = document.querySelector('.nav-link[href*=' + sectionId + ']');
+            const navToggle = document.getElementById('nav-toggle');
+            
+            // Only show nav toggle on mobile/tablet devices (viewport width <= 1024px)
+            if (window.innerWidth <= 1024) {
+                navToggle.style.display = 'block';
+            }
 
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -70,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                alert('Thank you for your message! We will get back to you soon.');
+                alert('Thank you for your message!  We will get back to you soon.');
                 contactForm.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
