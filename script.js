@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const header = document.getElementById('header');
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
         } else {
@@ -14,22 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        });
-    }
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.add('show');
+        navToggle.style.display = 'none';
+        document.body.style.overflow = 'hidden';
+    });
 
-    if (navClose) {
-        navClose.addEventListener('click', function() {
-            navMenu.classList.remove('show');
-            document.body.style.overflow = '';
-        });
-    }
+    navClose.addEventListener('click', function () {
+        navMenu.classList.remove('show');
+        navToggle.style.display = 'block';
+        document.body.style.overflow = '';
+    });
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             navMenu.classList.remove('show');
             document.body.style.overflow = '';
         });
@@ -37,13 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function scrollActive() {
         const scrollY = window.pageYOffset;
-        
+
         sections.forEach(section => {
             const sectionHeight = section.offsetHeight;
             const sectionTop = section.offsetTop - 150;
             const sectionId = section.getAttribute('id');
             const navLink = document.querySelector('.nav-link[href*=' + sectionId + ']');
-            
+
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                     navLink.classList.add('active');
@@ -57,20 +55,20 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', scrollActive);
 
     const contactForm = document.getElementById('contact-form');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const formData = new FormData(contactForm);
             const data = {};
             formData.forEach((value, key) => data[key] = value);
-            
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
-            
+
             setTimeout(() => {
                 alert('Thank you for your message! We will get back to you soon.');
                 contactForm.reset();
@@ -82,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function animateOnScroll() {
         const elements = document.querySelectorAll('.service-card, .solution-card, .about-card, .job-card');
-        
+
         elements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
+
             if (elementTop < windowHeight - 100) {
                 element.style.opacity = '1';
                 element.style.transform = 'translateY(0)';
@@ -108,15 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 const headerHeight = header.offsetHeight;
                 const targetPosition = targetSection.offsetTop - headerHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
