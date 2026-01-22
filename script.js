@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
 
+    // Header scroll effect
     window.addEventListener('scroll', function () {
         if (window.scrollY > 100) {
             header.classList.add('scrolled');
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Mobile menu toggle
     navToggle.addEventListener('click', function () {
         navMenu.classList.add('show');
         navToggle.style.display = 'none';
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Active navigation link on scroll
     function scrollActive() {
         const scrollY = window.pageYOffset;
 
@@ -43,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const navLink = document.querySelector('.nav-link[href*=' + sectionId + ']');
             const navToggle = document.getElementById('nav-toggle');
             
-            // Only show nav toggle on mobile/tablet devices (viewport width <= 1024px)
             if (window.innerWidth <= 1024) {
                 navToggle.style.display = 'block';
             }
@@ -60,6 +62,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', scrollActive);
 
+    // Smooth scroll for navigation links
+    // Smooth scroll for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href');
+
+            // ONLY prevent default if the link is an anchor (starts with #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = targetSection.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            // If it links to "solutions.html", the code above is skipped, 
+            // and the browser loads the new page normally.
+        });
+    });
+
+    // Contact form submission
     const contactForm = document.getElementById('contact-form');
 
     if (contactForm) {
@@ -84,48 +113,116 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function animateOnScroll() {
-        const elements = document.querySelectorAll('.service-card, .solution-card, .about-card, .job-card');
+    // Professional Scroll Animations using Intersection Observer API
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (elementTop < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                
+                // Trigger number counting animation if element has data-target
+                const statNumber = entry.target.querySelector('.stat-number[data-target]');
+                if (statNumber && !statNumber.classList.contains('counted')) {
+                    animateCounter(statNumber);
+                    statNumber.classList.add('counted');
+                }
             }
         });
-    }
+    }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.service-card, .solution-card, .about-card, .job-card');
+    // Observe all elements with animate-on-scroll class
+    const animatedElements = document.querySelectorAll('.animate-on-scroll, .stat-item, .testimonial-stat');
     animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
     });
 
+    // Number counting animation function
+    function animateCounter(element) {
+        const target = parseFloat(element.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                // Check if it's a decimal number
+                if (target % 1 !== 0) {
+                    element.textContent = current.toFixed(1);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+                requestAnimationFrame(updateCounter);
+            } else {
+                // Ensure final value is correct
+                if (target % 1 !== 0) {
+                    element.textContent = target.toFixed(1);
+                } else {
+                    element.textContent = Math.floor(target);
+                }
+            }
+        };
+
+        updateCounter();
+    }
+
+    // Trigger hero stats animation on page load if they're in view
     setTimeout(() => {
-        animateOnScroll();
-    }, 100);
-
-    window.addEventListener('scroll', animateOnScroll);
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                const headerHeight = header.offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+        const heroStats = document.querySelectorAll('.hero-stats .stat-item');
+        heroStats.forEach(stat => {
+            const rect = stat.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                const statNumber = stat.querySelector('.stat-number[data-target]');
+                if (statNumber && !statNumber.classList.contains('counted')) {
+                    stat.classList.add('animated');
+                    animateCounter(statNumber);
+                    statNumber.classList.add('counted');
+                }
             }
         });
+    }, 500);
+
+    // Add stagger animation to service cards and solution cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    const solutionCards = document.querySelectorAll('.solution-card');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    [serviceCards, solutionCards, testimonialCards].forEach(cardSet => {
+        cardSet.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    });
+
+    // Enhanced hover effects for cards
+    const cards = document.querySelectorAll('.service-card, .solution-card, .testimonial-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Removed parallax effect to prevent overlap issues
+
+    // Add fade-in animation to section headers
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    const headerObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+            }
+        });
+    }, { threshold: 0.2 });
+
+    sectionHeaders.forEach(header => {
+        header.style.opacity = '0';
+        headerObserver.observe(header);
     });
 });
