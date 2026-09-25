@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Header scroll effect
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (header) {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                if (!header.classList.contains('header-subpage')) {
+                    header.classList.remove('scrolled');
+                }
+            }
         }
     });
 
