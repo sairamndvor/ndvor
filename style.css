@@ -173,7 +173,7 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 16px;
     margin: 0;
     padding: 0;
 }
@@ -518,6 +518,136 @@ body {
     font-size: 16px;
     line-height: 1.7;
     opacity: 0.9;
+}
+
+/* EXECUTIVE LEADERSHIP SECTION */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.leadership-card {
+    background: var(--white);
+    border-radius: 20px;
+    border: 1px solid var(--gray-200);
+    padding: 32px;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(246, 139, 60, 0.4);
+}
+
+.leadership-image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 140px;
+}
+
+.leadership-img {
+    width: 140px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid var(--gray-100);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.leadership-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(246, 139, 60, 0.3);
+}
+
+.leadership-card:nth-child(2) .leadership-badge {
+    background: linear-gradient(135deg, var(--green), var(--green-dark));
+    box-shadow: 0 4px 10px rgba(157, 197, 68, 0.3);
+}
+
+.leadership-info {
+    flex: 1;
+}
+
+.leadership-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 4px;
+}
+
+.leadership-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.leadership-card:nth-child(2) .leadership-role {
+    color: var(--green);
+}
+
+.leadership-bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--gray-600);
+    margin-bottom: 16px;
+}
+
+.leadership-socials {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.leadership-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.leadership-link:hover {
+    color: var(--orange);
+}
+
+@media (max-width: 992px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .leadership-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .leadership-socials {
+        justify-content: center;
+    }
 }
 
 .services-grid {
