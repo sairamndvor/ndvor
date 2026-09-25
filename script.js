@@ -15,24 +15,43 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Mobile menu toggle
-    navToggle.addEventListener('click', function () {
-        navMenu.classList.add('show');
-        navToggle.style.display = 'none';
-        document.body.style.overflow = 'hidden';
-    });
+    // Mobile/Tablet menu toggle
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    }
 
-    navClose.addEventListener('click', function () {
-        navMenu.classList.remove('show');
-        navToggle.style.display = 'block';
-        document.body.style.overflow = '';
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
+    if (navClose && navMenu) {
+        navClose.addEventListener('click', function () {
             navMenu.classList.remove('show');
             document.body.style.overflow = '';
         });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            if (navMenu) {
+                navMenu.classList.remove('show');
+            }
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Touch/click toggle for dropdowns in mobile/tablet drawer
+    const dropdownWrappers = document.querySelectorAll('.nav-dropdown-wrapper');
+    dropdownWrappers.forEach(wrapper => {
+        const trigger = wrapper.querySelector('.nav-link');
+        if (trigger) {
+            trigger.addEventListener('click', function (e) {
+                if (window.innerWidth <= 1180) {
+                    // Toggle active dropdown class on tablet/mobile drawer
+                    e.preventDefault();
+                    wrapper.classList.toggle('open');
+                }
+            });
+        }
     });
 
     // Active navigation link on scroll
@@ -44,11 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const sectionTop = section.offsetTop - 150;
             const sectionId = section.getAttribute('id');
             const navLink = document.querySelector('.nav-link[href*=' + sectionId + ']');
-            const navToggle = document.getElementById('nav-toggle');
-            
-            if (window.innerWidth <= 1024) {
-                navToggle.style.display = 'block';
-            }
 
             if (navLink) {
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
